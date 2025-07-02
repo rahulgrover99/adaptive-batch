@@ -1,0 +1,67 @@
+# Problem statement
+
+- Given an array of 1 million random numbers, 
+  divide the array into N chunks (N = number of available cores).
+- Figure out how to find the number of available cores.
+  - Runtime available processors. 
+
+Implement `SumMultiThreadCallable` which will take in List, start index, end index
+and return the sum of that part of the array.
+
+In the Client class: 
+- find the number of available cores. 
+- divide the array into multiple parts.
+- and pass them to executor service.
+
+
+
+
+
+seed_urls = ["www.wikipedia.com", "www.google.com"]
+visited  =?> 
+queue<> -> seed urls
+
+while(!qu.empty()) {
+  pop the front url
+  submit the task to a worker -> http request for www.wikipedia.com -> parse 
+  -> urls to other pages are pushed into the queue
+
+}
+
+
+
+wiki
+/ /\ \ \ 
+
+/ / / \ \\ \ \\ 
+
+
+
+# Implement a BankAccount class with a balance.
+
+- Create multiple threads representing depositors and withdrawers.
+- Simulate a race condition where multiple users deposit and withdraw simultaneously.
+
+- Fix the issue using:
+- `synchronized` methods
+- `synchronized` blocks
+- 
+Measure execution time with and without synchronization.
+
+Bank Account -> b1
+
+synchronized deposit
+synchronized withdraw 
+
+t1(b1) -> .deposit() -> on what object it will take a lock -> b1
+at the same time can another thread call the withdraw function? -> NO because
+the lock is occupied by t1
+
+t2 -> getBalance() -> Yes
+
+
+t3(b2) -> deposit() while t1(b1) deposit() is getting executed.
+
+
+
+

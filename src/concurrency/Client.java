@@ -12,7 +12,7 @@ public class Client {
 
 
 
-        ExecutorService executorService = Executors.newFixedThreadPool(10);
+        ExecutorService executorService = Executors.newCachedThreadPool();
 
         List<Integer> list = List.of(4, 7, 9, 1, 5, 2, 8, 10, 11, 12, 6, 13);
         MergeSorter mergeSorter = new MergeSorter(list, executorService);
